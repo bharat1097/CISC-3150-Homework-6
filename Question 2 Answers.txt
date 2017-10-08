@@ -1,0 +1,50 @@
+a. 	Dog d = new Dog();
+	System.out.println(d.call(3));
+
+	Output: Woof, Woof, Woof!
+	The call(int k) method inside the Dog class gets called on.
+
+b. 	Object c = new Cat();
+	System.out.println(c);
+	
+	Output: I'm a cat, go away!
+	The toString() method in the Cat class gets called on. 
+
+c.	Object v = new Pet();
+	System.out.println(v.call());
+	
+	Output: NOTHING. Generates an error because Object class doesn't have a call() method.
+
+d.	Pet p = new Pet();
+	System.out.println(p);
+
+	Output: Pet@15615099
+	The hashCode is printed to the console. The java.lang.Object.toString() method is called because there is no toString() method 			implemented in the Pet class. According to the 	Java 8 API, the java.lang.Object.toString() method returns "...a string consisting of 		the name of the class of which the object is an instance, the at-sign character '@', and the unsigned hexadecimal representation of the 		hash code of the object."
+
+e.	Pet q = new Dog();
+	System.out.println(q.call());
+
+	Output: woof!
+	The call() method in the Dog class is called on.
+
+f.	Cat t = new Cat();
+	System.out.println(t.toString("Come here, kitty"));
+
+	Output: Come here, kitty? ... Don't waste my time.
+	The toString(String b) method in the Cat class is called upon. 
+
+g. 	Cat u = new Cat();
+	System.out.println(u.call(3));
+
+	Output: NOTHING! Generates an error because there is no implementation of call(int) method.
+
+h. 	Dog e = new Dog();
+	System.out.println(e.feet());
+	
+	Output: four
+	The feet() method in the Pet class is called on. 
+
+i.	Pet r = new Dog();
+	System.out.println(r.call(3));
+
+	Output: NOTHING! An error is generated because Pet class does NOT have an implementation of call(int) method.
